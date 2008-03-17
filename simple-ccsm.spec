@@ -1,6 +1,6 @@
 %define name simple-ccsm
 %define version 0.7.2
-%define rel 1
+%define rel 2
 %define git 0
 
 %if  %{git}
@@ -68,11 +68,13 @@ rm -rf %{buildroot}
 
 %post
 %update_menus
-%{update_desktop_database}
+%update_desktop_database
+%update_icon_cache hicolor
 
 %postun
 %clean_menus
-%{clean_desktop_database}
+%clean_desktop_database
+%clean_icon_cache hicolor
 
 #----------------------------------------------------------------------------
 
