@@ -1,6 +1,6 @@
 %define name simple-ccsm
-%define version 0.7.2
-%define rel 2
+%define version 0.7.4
+%define rel 1
 %define git 0
 
 %if  %{git}
