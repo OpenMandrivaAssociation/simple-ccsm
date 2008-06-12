@@ -38,8 +38,6 @@ Suggests: python-sexy
 %description
 Simple Compiz Config Settings Manager
 
-#----------------------------------------------------------------------------
-
 %prep
 %setup -q -n %{distname}
 
@@ -75,8 +73,6 @@ rm -rf %{buildroot}
 %clean_menus
 %clean_desktop_database
 %clean_icon_cache hicolor
-
-#----------------------------------------------------------------------------
 
 %files -f %{name}.lang
 %defattr(-,root,root)
