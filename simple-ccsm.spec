@@ -1,7 +1,7 @@
 %define name simple-ccsm
-%define version 0.8.0
+%define version 0.8.2
 %define rel 1
-%define git 20090208
+%define git 0
 
 %if  %{git}
 %define srcname %{name}-%{git}.tar.lzma
