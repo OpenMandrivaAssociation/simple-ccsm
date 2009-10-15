@@ -1,6 +1,6 @@
 %define name simple-ccsm
-%define version 0.8.2
-%define rel 2
+%define version 0.8.4
+%define rel 1
 %define git 0
 
 %if  %{git}
@@ -23,8 +23,8 @@ Source: http://releases.compiz-fusion.org/%{version}/%{srcname}
 License: GPL
 BuildRoot: %{_tmppath}/%{name}-root
 BuildArch: noarch
-BuildRequires: compiz-devel
-BuildRequires: compizconfig-python-devel
+BuildRequires: compiz-devel >= %{version}
+BuildRequires: compizconfig-python-devel >= %{version}
 BuildRequires: pygtk2.0-devel
 BuildRequires: intltool
 BuildRequires: desktop-file-utils
@@ -63,20 +63,6 @@ desktop-file-install \
 
 %clean
 rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post
-%update_menus
-%update_desktop_database
-%update_icon_cache hicolor
-%endif
-
-%if %mdkversion < 200900
-%postun
-%clean_menus
-%clean_desktop_database
-%clean_icon_cache hicolor
-%endif
 
 %files -f %{name}.lang
 %defattr(-,root,root)
