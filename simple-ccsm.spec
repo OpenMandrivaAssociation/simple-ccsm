@@ -18,7 +18,7 @@ Version: %version
 Release: %release
 Summary: Simple Compiz Config Settings Manager
 Group: System/X11
-URL: http://www.compiz-fusion.org/
+URL: https://www.compiz-fusion.org/
 Source: http://releases.compiz-fusion.org/%{version}/%{srcname}
 License: GPL
 BuildRoot: %{_tmppath}/%{name}-root
