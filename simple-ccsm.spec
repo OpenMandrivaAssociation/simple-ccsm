@@ -6,11 +6,11 @@
 %if  %{git}
 %define srcname %{name}-%{git}.tar.lzma
 %define distname %{name}
-%define release %mkrel 0.%{git}.%{rel}
+%define release 0.%{git}.%{rel}.1
 %else
 %define srcname %{name}-%{version}.tar.bz2
 %define distname %{name}-%{version}
-%define release %mkrel %{rel}
+%define release %{rel}.1
 %endif
 
 Name: %name
